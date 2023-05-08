@@ -1,0 +1,12 @@
+# Code editors
+**/.vscode
+**/.idea
+
+# Build
+
+# NPM
+**/node_modules
+**/package-lock.json
+
+# Environment variables
+**/.env
