@@ -23,6 +23,7 @@ export const logger = async (req, res, next) => {
   // 2.3. Append to file
   const fileHandle = await open("./server.log", "a");
   fileHandle.write(data + os.EOL);
+  fileHandle.close();
 
   // 2.4. Pass request to the next handlers
   next();
