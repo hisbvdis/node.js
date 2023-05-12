@@ -9,7 +9,6 @@ import bodyParser from "body-parser";
 import loggerMW from "./middleware/logger.js";
 import errorMW from "./middleware/error.js";
 import globalerrorMW from "./middleware/globalError.js";
-import multer from "multer";
 // 1.3. Routes
 import homeRouter from "./routes/home.js";
 import usersRouter from "./routes/users.js";
@@ -44,7 +43,6 @@ app.use(cors());
 // 4.2. Request body parsers
 app.use(bodyParser.json());                       // application/json
 app.use(bodyParser.urlencoded({extended: true})); // application/x-www-form-urlencoded
-// app.use(multer().none());                         // multipart/form-data
 // 4.3. All requests logger
 app.use(loggerMW);
 
